@@ -1,5 +1,3 @@
-import time
-
 from Adafruit_LED_Backpack import SevenSegment
 
 
