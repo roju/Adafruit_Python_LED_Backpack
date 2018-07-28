@@ -12,6 +12,6 @@ display = SevenSegment.SevenSegment()
 display.begin()
 
 display.clear()
-display.print_float(sys.argv[1:], decimal_digits=1)
+display.print_float(sys.argv[1:], decimal_digits=0)
 display.set_colon(False)
 display.write_display()
