@@ -1,5 +1,9 @@
 from Adafruit_LED_Backpack import SevenSegment
-import sys
+from argparse import ArgumentParser
+
+parser = ArgumentParser()
+parser.add_argument('sn', type=int)
+args = parser.parse_args()
 
 
 # Create display instance on default I2C address (0x70) and bus number.
@@ -12,6 +16,6 @@ display = SevenSegment.SevenSegment()
 display.begin()
 
 display.clear()
-display.print_float(sys.argv[1:], decimal_digits=0)
+display.print_float(args.sn, decimal_digits=0)
 display.set_colon(False)
 display.write_display()
